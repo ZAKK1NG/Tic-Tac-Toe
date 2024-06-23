@@ -1,0 +1,163 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+ 
+body{
+    background-color: #161616;
+    color: white ; 
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+}
+.main-heading{
+    font-size: 55px ;
+    font-weight: bold;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    background-color:  #5f6266a8;
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+   padding: 15px  ;
+}
+
+
+.place {
+    background: #1e1e1e !important;
+    position: relative;
+    width: 100px;
+        height: 100px;
+        border-radius: 16px; 
+        
+       
+         cursor: pointer;
+}
+.place div {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.x , .o {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.x i   {
+    color: red;
+    padding: 5px  0;
+    text-shadow: 0 0 5px red;
+    font-size: 70px;
+     
+    transition: all 0.2s ;
+}
+.o i {
+    color: green;
+    text-shadow: 0 0 5px green;
+    transition: all 0.2s ;
+    padding: 5px  0;
+    font-size: 80px;
+    
+}
+ 
+.icon i {
+    font-size: 100px;
+    color:  #dcdcdc; 
+}
+.icon h3 {
+    margin: 0;
+    color:   #dcdcdc; 
+}
+.computer , .user {
+    width: 150px;
+}
+
+.scoreBoard {
+    display: none ;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.scoreBoard .score h1 , .scoreBoard .score span {
+    font-size: 110px ;
+    color:   #dcdcdc; 
+
+}
+.scoreBoard .score span {
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 650px) {
+    .icon i {
+    font-size: 70px;
+   
+}
+.scoreBoard .score h1 , .scoreBoard .score span {
+    font-size: 70px ;
+   
+
+}
+.scoreBoard .score{
+    width: 200px;
+    gap: 20px;
+
+}
+}
+@media screen and (max-width: 550px) {
+    .icon i {
+    font-size: 50px;
+   
+}
+.icon h3 {
+  font-size: 18px;
+}
+.scoreBoard .score h1 , .scoreBoard .score span {
+    font-size: 50px ;
+   
+
+}
+.scoreBoard .score{
+    width: 150px;
+    gap : 10px !important; 
+}
+.game {
+      
+    gap: 5px ;
+    grid-template-columns:   repeat(3 ,  1fr )    ;
+    grid-template-rows:    repeat(3 ,  1fr );
+     
+     
+}
+.game .place {
+    width: 70px;
+    height: 70px;
+}
+.x i , .o i    {
+font-size: 50px;
+}
+
+}
+.result {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+     align-items: center;
+     justify-content: center; 
+     z-index: 1100;
+     background: rgba(0, 0, 0  , 0.2);
+     backdrop-filter: blur(25px);
+     transition: all .5s ease;
+    display: none;
+}
+.result .card {
+    height: 300px;
+    width: 300px;
+    background: #fff;
+}
